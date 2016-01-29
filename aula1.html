@@ -29,6 +29,9 @@ $(document).ready(function(){
         var arr_url = reponame.split("/");
         var reponame = arr_url[3];
         
+        alert("3: " + arr_url[3]);
+        
+        
         function list_issues(username, reponame, page){
             
             var url="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
@@ -36,9 +39,10 @@ $(document).ready(function(){
             var issues = $http.get(url, {params:_add_auth({page: page, state: 'all'})});
             
             return issues;
-        }();
+        };
         
-        alert(list_issues(username, reponame, page));
+        list_issues(username, reponame, page);
+        //alert(list_issues(username, reponame, page));
     });
 )};   
 </script>
