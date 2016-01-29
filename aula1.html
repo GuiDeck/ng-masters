@@ -55,6 +55,7 @@ $(document).ready(function(){
                     
                         $("#issuestable").append(tr);
                     }
+                    alert(meuJSON[(i-1)].GithubRepo);
                 }
             });
             //return meuJSON;
@@ -62,9 +63,6 @@ $(document).ready(function(){
         
         list_issues(username, reponame, page);
         //alert(retorno);
-        
-        alert(meuJSON[(i-1)].GithubRepo);
-        
     });
 });   
 </script>
