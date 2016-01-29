@@ -34,6 +34,7 @@ $(document).ready(function(){
             $.ajax({
                 url: endereco,
                 complete: function(res){
+                    alert(res);
                     var meuJSON = JSON.parse(res.responseText);
                     console.log(meuJSON); 
                 }
