@@ -16,21 +16,14 @@
 <script type="text/javascript">
 $(document).ready(function(){
     
-    alert("carregou");
-    
     $("#buscar").on("click", function(){
-        
-        alert("aqui");
     
         var username = $("#user").val();
         var reponame = $("#reponame").val();
         var page = 1;
         
         var arr_url = reponame.split("/");
-        var reponame = arr_url[3];
-        
-        alert("3: " + arr_url[3]);
-        
+        reponame = arr_url[3];
         
         function list_issues(username, reponame, page){
             
@@ -42,7 +35,7 @@ $(document).ready(function(){
         };
         
         list_issues(username, reponame, page);
-        //alert(list_issues(username, reponame, page));
+        alert(list_issues(username, reponame, page));
     });
 });   
 </script>
