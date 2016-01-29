@@ -25,7 +25,11 @@ $(document).ready(function(){
         var arr_url = reponame.split("/");
         reponame = arr_url[4];
         
-        alert(arr_url[0]);
+        if(reponame == undefined){
+            reponame = $("#reponame").val();
+        }
+        
+        alert(reponame);
         
         function list_issues(username, reponame, page){
             
