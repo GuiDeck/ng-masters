@@ -25,6 +25,10 @@ $(document).ready(function(){
         var username = $("#user").val();
         var reponame = $("#reponame").val();
         var page = 1;
+        
+        var arr_url = reponame.split("/");
+        var reponame = arr_url[3];
+        
         function list_issues(username, reponame, page){
             
             var url="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
