@@ -29,11 +29,17 @@ $(document).ready(function(){
         
         function list_issues(username, reponame, page){
             
-            var url="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
+            var endereco="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
             
-            var issues = $http.get(url, {params:_add_auth({page: page, state: 'all'})});
+            $.ajax({
+                url: endereco,
+                complete: function(res){
+                var meuJSON = JSON.parse(res.responseText);
+                console.log(meuJSON); 
+                }
+            });
             
-            return issues;
+            return meuJSON;
         };
         
         var retorno = list_issues(username, reponame, page);
