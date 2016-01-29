@@ -13,27 +13,26 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<!--script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(){
     $("#buscar").on("click", function(){
     
         var username = $("#user").val();
         var reponame = $("#reponame").val();
-    
-        function vaibuscarasissues(){
-            function GithubRepo(username, reponame){
-                //seu codigo aqui...
-            }
-    
-            //mais um pouco de codigo aqui....
-    
-            var le_repo = GithubRepo(username, reponame);
-            le_repo.busca_issues();
-            le_repo.popula_tabela("#issuestable");
-        }
+        var page = 1;
+        function list_issues(username, reponame, page){
+            
+            var url="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
+            
+            var issues = $http.get(url, {params:_add_auth({page: page, state: 'all'})});
+            
+            return issues;
+        }();
+        
+        alert(list_issues(username, reponame, page));
     });
 )}();   
-</script-->
+</script>
 <script src="../js/ajax.js"></script>
 <script src="../js/github_api2.js"></script>
 
