@@ -23,7 +23,9 @@ $(document).ready(function(){
         var page = 1;
         
         var arr_url = reponame.split("/");
-        reponame = arr_url[3];
+        reponame = arr_url[4];
+        
+        alert(reponame);
         
         function list_issues(username, reponame, page){
             
@@ -34,8 +36,8 @@ $(document).ready(function(){
             return issues;
         };
         
-        list_issues(username, reponame, page);
-        alert(list_issues(username, reponame, page));
+        var retorno = list_issues(username, reponame, page);
+        alert(retorno);
     });
 });   
 </script>
