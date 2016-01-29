@@ -25,11 +25,11 @@ $(document).ready(function(){
         var arr_url = reponame.split("/");
         reponame = arr_url[4];
         
-        alert(reponame);
-        
         function list_issues(username, reponame, page){
             
             var endereco="https://api.github.com/repos/"+username+"/"+reponame+"/issues";
+            
+            alert(endereco);
             
             $.ajax({
                 url: endereco,
