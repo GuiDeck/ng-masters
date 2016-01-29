@@ -17,7 +17,9 @@
 $(document).ready(function(){
     
     $("#buscar").on("click", function(){
-    
+        
+        event.preventDefault();
+        
         var username = $("#user").val();
         var reponame = $("#reponame").val();
         var page = 1;
