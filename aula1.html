@@ -2,13 +2,36 @@
 <html lang="pt_BR">
 <head>
 <meta charset="utf-8"/>
-<!--
-<link href="css/some-stylesheet.css" rel="stylesheet"/>
-<script src="scripts/some-script.js">
-</script>
--->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <h1>Aula 1</h1>
+<form name="form1" id="form1" method="POST" action="#">
+Usuario <input type="text" id="user">
+    <label for="reponame">Repositório: </label><input type="text" name="reponame" id="reponame">
+  <button id="buscar">Vai buscar as issues</button>
+</form>
+<table id="issuestable">
+<thead>
+<tr><th>Numero</th><th>Titulo</th>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 </body>
 </html>
