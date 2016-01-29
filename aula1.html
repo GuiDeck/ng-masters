@@ -18,8 +18,6 @@ $(document).ready(function(){
     
     $("#buscar").on("click", function(){
         
-        event.preventDefault();
-        
         var username = $("#user").val();
         var reponame = $("#reponame").val();
         var page = 1;
@@ -52,10 +50,13 @@ $(document).ready(function(){
             });
             
             //return meuJSON;
+            
+            event.preventDefault();
+            
         };
         
         var retorno = list_issues(username, reponame, page);
-        alert(retorno);
+        //alert(retorno);
         
     });
 });   
