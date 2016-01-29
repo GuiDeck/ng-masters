@@ -18,13 +18,16 @@
 <body>
 <h1>Aula 1</h1>
 <form name="form1" id="form1" method="POST" action="#">
-Usuario <input type="text" id="user">
+    <label for="user">Usuario: </label><input type="text" name="user" id="user">
     <label for="reponame">Repositório: </label><input type="text" name="reponame" id="reponame">
-  <button id="buscar">Vai buscar as issues</button>
+    <button id="buscar">Vai buscar as issues</button>
 </form>
 <table id="issuestable">
 <thead>
-<tr><th>Numero</th><th>Titulo</th>
+    <tr>
+        <th>Numero</th>
+        <th>Titulo</th>
+    </tr>
 </thead>
 <tbody>
   <tr>
