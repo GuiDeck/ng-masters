@@ -18,6 +18,8 @@ $(document).ready(function(){
     
     $("#buscar").on("click", function(){
         
+        limpar()
+        
         var username = $("#user").val();
         var reponame = $("#reponame").val();
         var page = 1;
@@ -40,10 +42,13 @@ $(document).ready(function(){
             $.ajax({
                 url: endereco,
                 complete: function(res){
-                    var meuJSON = JSON.parse(res.responseText);
-                    console.log(meuJSON); 
+                    var meuJSON = JSON.parse(res.responseText)
                     
                     for(var i = 0; i < meuJSON.length; i++){
+                    
+                        if(i == 0){
+                            $("#issuestable").children("tbody").remove();
+                        }
                     
                         var tr = "<tr>";
                         tr += "<td>"+ meuJSON[i].number+"</td>";
