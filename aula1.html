@@ -40,7 +40,7 @@ $(document).ready(function(){
             $.ajax({
                 url: endereco,
                 complete: function(res){
-                    var meuJSON = JSON.parse(res.responseText)
+                    var meuJSON = JSON.parse(res.responseText);
                     
                     for(var i = 0; i < meuJSON.length; i++){
                     
